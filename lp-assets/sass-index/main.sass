@@ -1,0 +1,356 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html, body
+  height: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  font-family: $default-font
+  font-weight: 500
+  overflow-x: hidden
+  input, textarea
+    border: #666 1px solid
+    outline: none
+    &:focus:required:invalid
+      border-color: red
+    &:required:valid
+      border-color: green
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+
+.h2
+  font-weight: bold
+
+//all Styles
+
+.headNav
+  margin: 0 auto
+  height: 80px
+  display: flex
+  align-content: center
+  justify-content: space-between
+  z-index: 20
+  padding: 30px 50px
+  position: absolute
+  top: 0
+  left: 0
+
+  .leftHeader
+    align-self: center
+    padding-top: 4px
+    .logo
+      display: inline-block
+      margin-right: 20px
+      img
+        width: 250px
+        height: auto
+
+  .rightHeader
+    align-self: center
+    nav
+      ul
+        display: flex
+        align-items: center
+        margin-bottom: 0
+        padding-left: 0
+        li
+          margin-right: 15px
+          margin-left: 15px
+          list-style: none
+
+          a
+            color: $black
+            font-size: 13px
+            text-transform: uppercase
+
+            display: block
+            transition: 0.5s
+            border-bottom: 2px solid transparent
+            font-size: 20px
+
+            &:hover
+              text-decoration: none
+              color: $accent
+
+.h2
+  color: $accent
+  font-size: 48px
+  text-align: left
+  line-height: 1.25
+
+.h3
+  color: rgb(141,150,222)
+  font-size: 24px
+
+.h4
+  color: $accent
+  font-size: 22px
+
+
+.topFluid
+  background: url("../img/top/topLogo.png") center top no-repeat
+  background-size: cover
+  padding-top: 60px
+  .topContainer
+
+    .textWrap
+      padding-top: 50px
+    .formWrap
+      height: 100%
+      min-height: 500px
+      background: url("../img/top/man.png") bottom right no-repeat
+      background-size: contain
+      position: relative
+
+    .topForm
+      background: $white
+      width: 80%
+      height: 200px
+      border: 10px solid $lightBlue
+      padding: 20px
+      position: absolute
+      right: 20px
+      bottom: 130px
+
+      .emailWrap
+        text-align: right
+
+      label
+        color: $lightBlue
+        font-size: 30px
+        font-weight: bold
+        margin-bottom: 0
+        line-height: 1.25
+
+      .topEmail
+        width: 70%
+        height: 40px
+        margin-top: 20px
+        border-radius: 10px
+        background: rgb(215,215,215)
+        border: none
+        padding: 0 15px
+
+      .topSend
+        text-align: right
+        background: rgb(158,227,136)
+        height: 40px
+        color: $white
+        text-transform: uppercase
+        margin-top: 20px
+        border: none
+        border-radius: 10px
+        width: 60%
+        text-align: center
+        font-weight: bold
+        font-size: 24px
+        cursor: pointer
+
+      .logo
+        width: 120px
+
+
+.companiesFluid
+  background: rgb(191,195,236)
+  .companiesContainer
+    .companiesList
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      align-items: center
+      padding: 0 10px
+      margin-bottom: 0
+
+      li
+        list-style: none
+        margin: 10px
+        img
+          max-width: 200px
+          max-height: 50px
+
+
+.referralFluid
+  padding-top: 60px
+  .referralContainer
+    .h2
+      text-align: center
+    .steps
+      padding-left: 0
+      width: 100%
+      li
+        list-style: none
+
+        p
+          color: rgb(92,113,205)
+          font-size: 24px
+          text-align: center
+
+    img
+      height: 100%
+      width: 100%
+
+    .levels
+      padding-left: 0
+      width: 100%
+      display: flex
+      justify-content: space-around
+      align-items: center
+      li
+        list-style: none
+        width: 220px
+        text-align: center
+
+        p
+          color: rgb(92,113,205)
+          font-size: 24px
+          text-align: center
+
+
+.whatFluid
+  background: url("../img/what/whatBg.png") no-repeat center
+  background-size: cover
+  padding-top: 100px
+  padding-bottom: 100px
+  .whatContainer
+    .green
+      color: rgb(158,227,136)
+
+
+.aboutFluid
+  padding-top: 60px
+  padding-bottom: 60px
+  .aboutContainer
+    .question
+      .h2
+        position: relative
+        z-index: 1
+        line-height: 1
+        &:after
+          content: '?'
+          font-size: 190px
+          color: rgb(250,217,215)
+          position: absolute
+          z-index: -1
+          right: -30px
+          bottom: 0
+          line-height: 0.8
+    .text
+      p
+        font-size: 18px
+        color: $accent
+
+    .fact
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-top: 50px
+      .image
+        width: 100px
+        height: auto
+      .desc
+        width: 200px
+        margin-left: 20px
+        p
+          font-size: 16px
+          color: rgb(87,107,196)
+
+.payFoFluid
+  padding-top: 100px
+  background: url("../img/payFo/payFoBg.png") no-repeat center top
+  -webkit-background-size: cover
+  background-size: cover
+  padding-bottom: 70px
+  .payFoContainer
+    .h2
+      color: $white
+
+    .h4
+      color: $white
+
+    .bottomForm
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 50px
+
+    .bottomEmail
+      width: 50%
+      height: 100%
+      background: $white
+      border: none
+
+    .bottomSend
+      width: 50%
+      height: 100%
+      background: rgb(148,219,128)
+      color: $white
+      border: none
+      font-size: 20px
+
+.footerFluid
+  padding-top: 60px
+  padding-bottom: 60px
+  .footerContainer
+
+    .logo
+      img
+        max-width: 250px
+    .socialLinks
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      padding-left: 0
+      margin-top: 20px
+      li
+        list-style: none
+        margin-right: 5px
+        a
+          color: rgb(72,72,72)
+          font-size: 20px
+
+    .h5
+      font-size: 26px
+      font-weight: bold
+      color: rgb(72,72,72)
+      text-align: left
+
+    .footerLinks
+
+      padding-left: 0
+      li
+        list-style: none
+        a
+          font-weight: bold
+          font-size: 18px
+          color: rgb(129,129,129)
+
+    .terms
+      padding-top: 50px
+      p
+        font-weight: bold
+        color: rgb(129,129,129)
+        text-align: center
+
+
+
+@import "media"
+// Always at the end
